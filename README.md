@@ -235,6 +235,8 @@ end
 --注册你的方法
 Framework.GamePlug.OnPlayerDeath:Register(MyOnPlayerDeath)
 ```
+						 
+# 五、交流群
 **MaiMaiFramework框架/插件开发群691763332**
 
 						 
