@@ -235,7 +235,8 @@ end
 --注册你的方法
 Framework.GamePlug.OnPlayerDeath:Register(MyOnPlayerDeath)
 ```
-						 
+### 3）详细文档						 
+[跳转](https://github.com/umaruIsABoy/MaiMaiFramework.lua/wiki)			 
 # 五、交流群
 **MaiMaiFramework框架/插件开发群691763332**
 
