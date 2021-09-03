@@ -234,4 +234,6 @@ function MyOnPlayerDeath(player,msg)
 end
 --注册你的方法
 Framework.GamePlug.OnPlayerDeath:Register(MyOnPlayerDeath)
-```    
+```
+
+						 
