@@ -28,7 +28,7 @@
 
 ## 1.下载MaiMaiFramework.lua
 
-链接: [点击下载](https://github.com/umaruIsABoy/MaiMaiFramework.lua/blob/main/MaiMaiFramework.lua).
+链接: [点击下载](https://github.com/umaruIsABoy/MaiMaiFramework.lua/releases/tag/v0.1.0).
 
 ## 2.更改project.json内容
 ```c
@@ -81,7 +81,7 @@ end
 ```
 <font color=#999AAA >一个并没有什么用的打印插件就这样开发完成了</font>
 ## 3.测试你的插件
-<font color=#999AAA >[下载MaiMaiFramework.lua](https://github.com/umaruIsABoy/MaiMaiFramework.lua/blob/main/MaiMaiFramework.lua)并且添加你的插件</font>
+<font color=#999AAA >[下载MaiMaiFramework.lua](https://github.com/umaruIsABoy/MaiMaiFramework.lua/releases/tag/v0.1.0)并且添加你的插件</font>
 ```c
 {
     "game": ["MaiMaiFramework.lua", "PrintPlug.lua"], 
