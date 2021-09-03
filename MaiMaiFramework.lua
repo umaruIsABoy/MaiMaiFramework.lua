@@ -108,7 +108,7 @@ function Invoke(f,t,...)
         TimeCount[TimeCountIndex].endvalue=(t or 0)*10
     end
     TimeCount[TimeCountIndex].f=f
-    TimeCount[TimeCountIndex].args=...
+    TimeCount[TimeCountIndex].args={...}
 end
 
 --Mathf静态方法
@@ -422,7 +422,9 @@ function Framework.Update.Invoke()
     for k,v in pairs(TimeCount) do
         v.value=v.value+1
         if v.endvalue and v.value>v.endvalue then
-            v.f(v.args)
+
+            local args=v.args
+            v.f(args[1],args[2],args[3],args[4],args[5],args[6],args[7])
             --重新开始计时
             v.value=0
             TimeCountIndex=TimeCountIndex-1
@@ -889,9 +891,9 @@ if Game then
         end
         self.REGISTER:Register(fun)
     end
-    function Framework.GamePlug.OnChat:Trigger(msg, player)
+    function Framework.GamePlug.OnChat:Trigger(player,msg)
         if self.REGISTER then
-            self.REGISTER:Trigger(msg,player)
+            self.REGISTER:Trigger(player,msg)
         end
     end
     function Framework.GamePlug.OnChat:UnRegister(fun)
@@ -1240,7 +1242,7 @@ end
 
 Framework.MonsterType={
     A101AR=1477,
-    RUNNERO=247,
+    RUNNER0=247,
     NORMAL3=202,
     NORMAL5=204,
     RUNNER4=209,
@@ -1248,12 +1250,12 @@ Framework.MonsterType={
     HEAVY1=244,
     A104RL=1478,
     RUNNER=5210,
-    NORMALO=246,
+    NORMAL0=246,
     RUNNER2=207,
     NORMAL6=205,
     HEAVY2=245,
     RUNNER1=206,
-    PUMPKINHEAD=1286,
+    PUMPKIN_HEAD=1286,
     PUMPKIN=1285,
     RUNNER3=208,
     NORMAL1=200,
@@ -1261,6 +1263,26 @@ Framework.MonsterType={
     GHOST=1284,
     NORMAL4=203,
     RUNNER6=211,
+    ALIEN_BEAST=1289,				--异形斗兽
+    SOLDIER=688,					--黄巾士兵
+    GENERAL=689,					--黄巾将领
+    SNOWMAN=763,					--圣诞雪人
+    MUSHROOM_KING=248,				--蘑菇王
+    ORANGE_MUSHROOM=249,			--橙色蘑菇
+    RED_MUSHROOM=250,				--红刺蘑菇王
+    WATER_KING=251,					--水灵王
+    GREEN_WATER=687,				--绿水灵
+    RED_ROBOT=940,					--斗魂红色机
+    BLUE_ROBOT=941,					--斗魂蓝色机
+    GREEN_FANS=1097,				--绿衣狂热球迷
+    RED_FANS=1098,					--红衣狂热球迷
+    THROWING_ZOMBIES=1520,			--投掷僵尸
+    EXPLODING_ZOMBIES=1521,			--自爆僵尸
+    BATTERY=1509,					--生化炮塔
+    DEAD_KING=1650,					--异域尸王
+    DEAD_MAN1=1651,					--异域男僵尸1
+    DEAD_MAN2=1652,					--异域男僵尸2
+    DEAD_WOMAN=1653,				--异域女僵尸
 }
 
 
@@ -1287,7 +1309,7 @@ if CommandPlug then
                 COMMAND[player.name]= COMMAND[player.name] or {}
                 table.insert(COMMAND[player.name],signal)
             elseif signal==Framework.SignalToGame.CommandEnd then
-                OnChat(ByteArrayToString(COMMAND[player.name]),player)
+                OnChat(player,ByteArrayToString(COMMAND[player.name]))
                 COMMAND[player.name]={}
             end
         end
