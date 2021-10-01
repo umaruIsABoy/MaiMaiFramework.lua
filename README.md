@@ -66,7 +66,7 @@ if Game then
 	end
 end
 if UI then
-	function MyGameFunc(time)
+	function MyUIFunc(time)
 		print("每帧执行:".."当前时间"..time)
 	end
 end
@@ -172,7 +172,7 @@ Framework.UIPlug.OnUpdate:UnRegister()
 **OnLaterUpdate（）**
 <font color=#999AAA>会在OnUpdate的下一帧执行</font>
 ```lua
-function MyOnLaterUpdate()
+function MyOnLaterUpdate(time)
 
 end
 --注册你的方法
@@ -198,19 +198,19 @@ end
 Framework.GamePlug.OnPlayerTreat:Register(MyOnPlayerHurt)
 ```
                                               
-**OnPlayerUpdate（player）**
+**OnPlayerUpdate（player,time）**
 <font color=#999AAA>带有player参数的每帧调用</font>
 ```lua
-function MyOnPlayerUpdate(player)
+function MyOnPlayerUpdate(player,time)
 
 end
 --注册你的方法
 Framework.GamePlug.OnPlayerUpdate:Register(MyOnPlayerUpdate)
 ```                                   
-**OnPlayerLaterUpdate（player）**
+**OnPlayerLaterUpdate（player,time）**
 <font color=#999AAA>在OnPlayerUpdate下一帧调用</font>
 ```lua
-function MyOnPlayerLaterUpdate(player)
+function MyOnPlayerLaterUpdate(player,time)
 
 end
 --注册你的方法
