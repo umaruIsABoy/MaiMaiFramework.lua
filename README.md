@@ -159,9 +159,28 @@ Framework.UIPlug.OnUpdate:UnRegister()
 ### 1）官方方法
 <font color=#999AAA >官方方法注册的方法参数看：[官方文档](https://tw.beanfun.com/cso/STUDIO/api/index.html)
 </font>  
+<font color=#999AAA>注册到官方客户端（UI）方法示例</font>				 
+```lua
+--注册匿名方法
+Framework.UIPlug.OnUpdate:Register(
+	function(t)
+		print("在UI中每帧执行")
+	end
+)
+--注册普通方法
+function MyOnKeyDown(inputs)	
+	if inputs[UI.KEY.A]==true then
+		print("a key is pressed!")
+	end
+end
+Framework.UIPlug.OnKeyDown:Register(MyOnKeyDown)
+
+						 
+```
+--注册你的方法
 ### 2）扩展方法参数说明
 <font color=#999AAA>服务端（Game）扩展方法</font>
-
+				
       OnLaterUpdate
       OnPlayerTreat
       OnPlayerHurt
