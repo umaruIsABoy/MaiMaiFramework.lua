@@ -188,7 +188,7 @@ Framework.UIPlug.OnKeyDown:Register(MyOnKeyDown)
       OnPlayerLaterUpdate
       OnChat
       OnPlayerDeath
-**OnLaterUpdate（）**
+**OnLaterUpdate（time）**
 <font color=#999AAA>会在OnUpdate的下一帧执行</font>
 ```lua
 function MyOnLaterUpdate(time)
