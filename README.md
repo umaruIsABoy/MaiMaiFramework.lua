@@ -177,7 +177,7 @@ Framework.UIPlug.OnKeyDown:Register(MyOnKeyDown)
 
 						 
 ```
---注册你的方法
+
 ### 2）扩展方法参数说明
 <font color=#999AAA>服务端（Game）扩展方法</font>
 				
@@ -214,7 +214,7 @@ function MyOnPlayerHurt(player)
 
 end
 --注册你的方法
-Framework.GamePlug.OnPlayerTreat:Register(MyOnPlayerHurt)
+Framework.GamePlug.OnPlayerHurt:Register(MyOnPlayerHurt)
 ```
                                               
 **OnPlayerUpdate（player,time）**
