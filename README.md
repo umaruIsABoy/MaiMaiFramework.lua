@@ -10,7 +10,8 @@
 
 # 前言
 
-<font color=#999AAA >CSOL缔造者LUA的脚本多种多样。但是往往地图作者不会使用LUA，而LUA的编写者又不会做地图。或者当你需要移植其他作者的脚本却无从下手。为了建立起作者与脚本编写者的桥梁，为了能够让脚本能够模块化，更高的移植性，能够让不会编写LUA的作者们也能够轻易的使用，扩展，移植别人的插件，MaiMaiFramework诞生了</font>
+<font color=#999AAA >CSOL缔造者LUA的脚本多种多样。但是往往地图作者不会使用LUA，而LUA的编写者又不会做地图。或者当你需要移植其他作者的脚本却无从下手。为了建立起作者与脚本编写者的桥梁，为了能够让脚本能够模块化，更高的移植性，能够让不会编写LUA的作者们也能够轻易的使用，扩展，移植别人的插件，MaiMaiFramework诞生了
+为了方便国内访问，已经移至https://gitee.com/UmaruIsBoy/MaiMaiFramework.lua</font>
 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
